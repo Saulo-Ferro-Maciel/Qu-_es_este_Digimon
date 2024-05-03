@@ -233,7 +233,20 @@ document.addEventListener('keypress', function(event) {
     }
 });
 
-
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+  
+if (window.innerWidth < 768) {
+    toggleFullScreen();
+}
+  
 // Adicionando evento de clique ao botão
 document.getElementById("botao--confirm").addEventListener("click", scoreGame);
 
