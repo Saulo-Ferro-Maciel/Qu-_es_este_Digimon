@@ -142,6 +142,13 @@ function mensagemScore(score, lives) {
             document.querySelector('.container--MensagemDoAgumonHakasePerda').style.display = 'none'; 
             document.querySelector('.container--MensagemDoAgumonHakaseVitoria').style.display = 'flex'; 
         }
+    } else {
+        if (score >= 6){
+            document.querySelector('.background').style.display = 'flex';
+            document.querySelector('.container--MensagemDoAgumonHakase').style.display = 'none'; 
+            document.querySelector('.container--MensagemDoAgumonHakaseVitoria').style.display = 'none'; 
+            document.querySelector('.container--MensagemDoAgumonHakasePerda').style.display = 'flex'; 
+        }
     }
     
 }
