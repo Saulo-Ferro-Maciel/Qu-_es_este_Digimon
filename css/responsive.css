@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px) {
+    .container--digi {
+        flex-direction: column;
+    }
+
+    .forca {
+        margin-top: 20px;
+    }
+
+    .botao--confirm {
+        margin-top: 20px;
+    }
+
+    .imgDigi {
+        width: 60%;
+    }
+
+    .logo--doSite {
+        width: 65%;
+    }
+
+    body::before {
+        position: fixed;
+    }
+
+    .container--placar {
+        width: 80vw;
+    }
+
+    .red-heart {
+        opacity: 0.9;;
+    }
+
+    .gold-star {
+        opacity: 0.98;
+    }
+
+    .not--mobile {
+        display: none;
+    }
+
+    .mensagem {
+        position: relative;
+        margin-right: 2%;
+        margin-left: 1%;
+    }
+
+    .mensagem  img {
+        width: 32%;
+    }
+
+    .background {
+        display: flex;
+        flex-direction: column;
+    }
+}

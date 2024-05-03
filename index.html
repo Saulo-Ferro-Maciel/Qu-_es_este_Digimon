@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Config HTML-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es este Digimon?</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://saulo-ferro-maciel.github.io/Digipedia/src/imagens/agumonpixel.png">
+   
+    <!-- Config Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Config CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- Config Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Config JS-->
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+
+   <div class="background">
+        <div class="mensagem">
+            <div class="container--MensagemDoAgumonHakase">
+                <div class="mensagem-container">
+                    <h2 style="font-family: 'Oxanium'; color:  rgba(244, 203, 21, 0.957);align-items: center; ">Mensaje de Agumon Hakase</h2>
+                    <b class="hakaseMensagem">
+                        <p>¡Hola joven Tamer!</p>
+                        <p class="not--mobile">Este proyecto es un juego de fans,</p>
+                        <p class="not--mobile">un pequeño quizz game.</p> <br>
+                        <p>Para jugar solo necesitas adivinar el nombre de los digimons, al hacerlo ganarás una estrella y si te equivocas perderás una vida. Tienes 6 vidas y deberás adivinar 6 nombres para ganar el juego y ser un gran Tamer.</p>
+                        <p  class="not--mobile" style="opacity: 0.8; font-size: 9px;"><br>En este juego, puedes utilizar el escudo de armas de la sabiduría y algunos de tus conocimientos de diseño UX y desarrollo web. Este es el mejor consejo para ti con los digimons más inusuales.</p><br>
+                        <p>¿Aceptarás el desafío y te convertirás en un gran Tamer?</p>
+                    </b>
+                    <button class="butao-aceptos" onclick="startAnimation()"><i>¡Acepto!</i></button>
+
+                </div>
+                <img src="https://digimon-api.com/images/digimon/w/Agumon_Hakase.png" alt="Icone do Agumon Hakase" title="Agumon Hakase">
+            </div>
+
+            <div class="container--MensagemDoAgumonHakaseVitoria" style="display: none;">
+                <div class="mensagem-container">
+                    <h2 style="font-family: 'Oxanium'; color:  rgba(244, 203, 21, 0.975);align-items: center;">🏆 Agumon Hakase te felicita 🏅</h2>
+                    <b class="hakaseMensagem">
+                        <p>Querido Tamer,</p>
+                        <p>Felicitaciones, realmente pasaste mi juego de preguntas.</p>
+                        <p>Eres realmente digno de ser un Tamer</p> <br>
+                        <p>¿Aceptarás una revancha?</p>
+                    </b>
+                    <button class="butao-aceptos" onclick="startAnimation()"><i>¡Acepto!</i></button>
+
+                </div>
+                <img src="https://digimon-api.com/images/digimon/w/Agumon_Hakase.png" alt="Icone do Agumon Hakase" title="Agumon Hakase">
+            </div>
+
+            <div class="container--MensagemDoAgumonHakasePerda" style="display: none;">
+                <div class="mensagem-container">
+                    <h2 style="font-family: 'Oxanium'; color:  rgba(244, 203, 21, 0.975);align-items: center;">😢 Agumon Hakase lo siento 😭</h2>
+                    <b class="hakaseMensagem">
+                        <p>Estimado jugador,</p>
+                        <p>Parece que perdiste todas tus vidas y no alcanzaste la puntuación de 6 estrellas.</p>
+                        <p>¡Parece que no eres un Tamer muy inteligente!</p> <br>
+                        <p>¿Aceptarás una revancha?</p>
+                    </b>
+                    <button class="butao-aceptos" onclick="startAnimation()"><i>¡Acepto!</i></button>
+
+                </div>
+                <img src="https://digimon-api.com/images/digimon/w/Agumon_Hakase.png" alt="Icone do Agumon Hakase" title="Agumon Hakase">
+            </div>
+        </div>
+   </div>
+
+    <div class="centralizador">
+        <div class="container--header">
+            <img src="https://saulo-ferro-maciel.github.io/Digipedia/src/imagens/Digimon-Logo-Transparent.png" alt="" class="logo logo--doSite">
+        </div>     
+        
+        <h1>¿Cómo se llama este Digimon?</h1>
+
+        <h3 class="containerCentralizador">Consejos:</h3>
+        <div class="containerCentralizador">
+            <div style=" margin-right: 1rem;">
+                <h4 id="level--digimon">Level</h4>
+            </div>
+            <div style=" margin-right: 1rem;">
+                <h4 id="attribute--digimon">Attribute</h4>
+            </div>
+            <div style=" margin-right: 1rem;">
+                <h4 id="type--digimon">Type</h4>
+            </div>
+        </div>
+        
+        <div class="container--placar">
+            <div class="lifes">
+                <i class="fas fa-heart red-heart"> </i>
+                <p id="span--LifePlayer"></p>
+            </div>
+            <div class="points">
+                <i class="fas fa-star gold-star"></i>
+                <p id="span--ScorePlayer"></p>
+            </div>
+        </div>
+        
+        <div class="container--digi">
+            <img src="#" id="digimonImage" class="imgDigi">
+            <div class="forca">
+                <div class="container-text" id="containerText">
+                    <input type="text" maxlength="1" placeholder="_" class="texto">
+                    <input type="text" maxlength="1" placeholder="_" class="texto">
+                    <input type="text" maxlength="1" placeholder="_" class="texto">
+                </div>
+                <button class="botao--confirm" id="botao--confirm" onclick="scoreGame()">CONFIRMAR</button>
+                
+            </div>
+                   
+        </div> 
+
+        <footer>
+            <p>&copy; 2024 Saulo Ferro Maciel.</p>
+        </footer>
+        
+    </div>
+</body>
+</html>
