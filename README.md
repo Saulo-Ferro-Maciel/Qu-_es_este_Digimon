@@ -48,4 +48,4 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 
 ---
 
-Feito com 💻 por [Saulo Ferro Maciel](https://github.com/saulo-ferro-maciel)
+Feito com ❤️ por [Saulo Ferro Maciel](https://github.com/saulo-ferro-maciel)
