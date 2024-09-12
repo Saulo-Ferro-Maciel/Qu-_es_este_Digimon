@@ -25,7 +25,7 @@ Você pode jogar diretamente no site:
 
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/Que_es_este_Digimon.git
+    https://github.com/Saulo-Ferro-Maciel/Que_es_este_Digimon.git
     ```
 
 2. Navegue até a pasta do projeto:
